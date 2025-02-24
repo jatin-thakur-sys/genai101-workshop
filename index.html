@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Fun Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffcccc;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        button {
+            background-color: #ff6666;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #ff4d4d;
+        }
+
+        .fact-display {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cat Fun Facts</h1>
+        <button id="factButton">Show Me a Cat Fact!</button>
+        <div id="factDisplay" class="fact-display"></div>
+    </div>
+    <script>
+        const funFacts = [
+            "Cats have five toes on their front paws, but only four toes on their back paws.",
+            "A group of cats is called a clowder.",
+            "Cats can rotate their ears 180 degrees.",
+            "The world's largest cat measured 48.5 inches long.",
+            "Cats sleep for 70% of their lives.",
+            "A cat's nose print is unique, much like a human's fingerprint.",
+            "Cats have a special reflective layer behind their retinas called the tapetum lucidum, which helps them see in low light."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * funFacts.length);
+            document.getElementById('factDisplay').innerText = funFacts[randomIndex];
+        });
+    </script>
+</body>
+</html>
